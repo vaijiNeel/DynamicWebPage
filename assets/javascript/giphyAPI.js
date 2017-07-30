@@ -1,5 +1,6 @@
-animalArr = ["puppy", "kitten", "panda", "lamb", "horse", "bunny", "fox", "tiger",
-	"lion", "giraffe", "elephant", "dog", "cat", "sheep", "goat", "deer","whale"]
+animalArr = ["puppy", "kitten", "lamb", "horse", "bunny", "leopard", "tiger",
+	"lion", "giraffe", "elephant", "dog", "cat", "sheep", "goat", "deer","whale","hamster",
+	"zebra"];
 
 //function to load inital buttons from array
 function initailLoad() {
@@ -30,6 +31,7 @@ function loadImgs(results) {
 	console.log(results[1]);
 	//create imgs and display in page
 	for (var i = 0; i < results.length; i++) {	
+		console.log(results[i].rating);		
 		//img	
 		createImg = $("<img>");	
 		createImg.addClass("imgCls");
@@ -43,7 +45,7 @@ function loadImgs(results) {
 		console.log("still - " + temp);
 		//rating
 		pTag = $("<p>");
-		console.log(results[i].rating);
+		
 		pTag.html("<b>Rating: " + results[i].rating + "<b>");		
 		//append to div
 		createDiv = $("<div>");
@@ -51,7 +53,7 @@ function loadImgs(results) {
 		createDiv.append(createImg);	
 		createDiv.append(pTag);
 		//append to parent div
-		$(".searchImgs").append(createDiv);
+		$(".searchImgs").append(createDiv);		
 	}
 }
 
