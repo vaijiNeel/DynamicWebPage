@@ -1,4 +1,4 @@
-animalArr = ["puppy", "kitten", "lamb", "horse", "bunny", "leopard", "tiger",
+animalArr = ["puppy", "kitten", "panda", "lamb", "horse", "bunny", "leopard", "tiger",
 	"lion", "giraffe", "elephant", "dog", "cat", "sheep", "goat", "deer","whale","hamster",
 	"zebra"];
 
@@ -67,7 +67,7 @@ $(document).ready(function(){
 	$(document).on("click", ".animalBtn", function(event){
 		event.preventDefault();
 		var name = $(this).text();
-		var queryURL = `https://api.giphy.com/v1/gifs/search?q=${name}&api_key=2421e87268de4373afcba9ba73735910&limit=10`
+		var queryURL = `https://api.giphy.com/v1/gifs/search?q=${name}&rating=g&offset=0&lang=en&api_key=2421e87268de4373afcba9ba73735910&limit=10`
 		//console out
 		console.log(name);
 		console.log(queryURL);
