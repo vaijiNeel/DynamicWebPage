@@ -44,8 +44,7 @@ function loadImgs(results) {
 		createImg.attr('data-index',i);
 		console.log("still - " + temp);
 		//rating
-		pTag = $("<p>");
-		
+		pTag = $("<p>");		
 		pTag.html("<b>Rating: " + results[i].rating + "<b>");		
 		//append to div
 		createDiv = $("<div>");
